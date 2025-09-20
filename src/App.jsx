@@ -24,17 +24,14 @@ class App extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.todos !== this.state.todos) {
-      console.log(this.state.todos);
       localStorage.setItem("todos", JSON.stringify(this.state.todos));
     }
   }
 
   componentDidMount() {
     if (localStorage.getItem("todos")) {
-      console.log("a");
       this.setState({ todos: JSON.parse(localStorage.getItem("todos")) });
     } else {
-      console.log("b");
       localStorage.setItem("todos", JSON.stringify(initialTodos));
     }
   }

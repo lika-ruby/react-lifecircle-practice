@@ -21,9 +21,6 @@ export class Calculator extends Component {
   };
 
   countSum = () => {
-    console.log(this.state.value1);
-    console.log(this.state.value2);
-
     return this.state.value1 + this.state.value2;
   };
 
